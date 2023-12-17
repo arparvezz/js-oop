@@ -1,9 +1,10 @@
-const Human = require('./Human')
+const Human = require("./Human");
 
-class Designer extends Human{
-  constructor(name, email,prof){
-    super(name,email)
-    this._prof = prof
+class Designer extends Human {
+  constructor(name, email, prof, address) {
+    super(name, email);
+    this._prof = prof;
+    this.address = address || null;
   }
   get prof() {
     return this._prof;
@@ -11,8 +12,14 @@ class Designer extends Human{
   set prof(value) {
     this._prof = value;
   }
-  toString(){
-    return `Hi, I'm designer from designer class.`
+  get address() {
+    return this._address;
+  }
+  set address(value) {
+    this._address = value;
+  }
+  toString() {
+    return `Hi, I'm designer from designer class.`;
   }
 }
 
